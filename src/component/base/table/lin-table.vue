@@ -4,6 +4,7 @@
       ref="linTable"
       v-loading="loading"
       stripe
+      :fit="true"
       row-key="id"
       :border="border"
       :data="currentData"

@@ -7,7 +7,7 @@ const adminRouter = {
   filePath: 'view/admin/',
   order: null,
   inNav: true,
-  permission: ['超级管理员独有权限'],
+  // permission: ['超级管理员独有权限'],
   children: [
     {
       route: '/admin/user/list',
@@ -26,7 +26,7 @@ const adminRouter = {
           filePath: 'view/admin/user/user-list.vue',
           inNav: true,
           icon: 'iconfont icon-huiyuanguanli',
-          permission: ['超级管理员独有权限'],
+          // permission: ['超级管理员独有权限'],
         },
         {
           title: '添加用户',
@@ -36,7 +36,7 @@ const adminRouter = {
           icon: 'iconfont icon-add',
           name: 'UserCreate',
           filePath: 'view/admin/user/user-create.vue',
-          permission: ['超级管理员独有权限'],
+          // permission: ['超级管理员独有权限'],
         },
       ],
     },
@@ -57,7 +57,7 @@ const adminRouter = {
           filePath: 'view/admin/group/group-list.vue',
           title: '分组列表',
           icon: 'iconfont icon-huiyuanguanli',
-          permission: ['超级管理员独有权限'],
+          // permission: ['超级管理员独有权限'],
         },
         {
           route: '/admin/group/add',
@@ -67,7 +67,7 @@ const adminRouter = {
           inNav: true,
           title: '添加分组',
           icon: 'iconfont icon-add',
-          permission: ['超级管理员独有权限'],
+          // permission: ['超级管理员独有权限'],
         },
         {
           route: '/admin/group/edit',
@@ -77,7 +77,7 @@ const adminRouter = {
           inNav: false,
           title: '修改分组',
           icon: 'iconfont icon-add',
-          permission: ['超级管理员独有权限'],
+          // permission: ['超级管理员独有权限'],
         },
       ],
     },

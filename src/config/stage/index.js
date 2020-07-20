@@ -1,5 +1,5 @@
 import adminConfig from './admin'
-import bookConfig from './book' // 引入图书管理路由文件
+import userConfig from './user' // 引入用户管理路由文件
 import pluginsConfig from './plugin'
 import Utils from '@/lin/util/util'
 
@@ -24,7 +24,7 @@ let homeRouter = [
     inNav: true,
     icon: 'iconfont icon-rizhiguanli',
     order: 2,
-    permission: ['查询所有日志'],
+    // permission: ['查询所有日志'],
   },
   {
     title: '个人中心',
@@ -44,7 +44,7 @@ let homeRouter = [
     inNav: false,
     icon: 'iconfont icon-rizhiguanli',
   },
-  bookConfig,
+  userConfig,
   adminConfig,
 ]
 

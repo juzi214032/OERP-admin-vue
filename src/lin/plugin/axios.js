@@ -85,19 +85,11 @@ _axios.interceptors.request.use(
       console.warn(`其他请求类型: ${reqConfig.method}, 暂无自动处理`)
     }
     // step2: permission 处理
-    if (reqConfig.url === 'cms/user/refresh') {
-      const refreshToken = getToken('refresh_token')
-      if (refreshToken) {
-        // eslint-disable-next-line no-param-reassign
-        reqConfig.headers.Authorization = refreshToken
-      }
-    } else {
-      // 有access_token
-      const accessToken = getToken('access_token')
-      if (accessToken) {
-        // eslint-disable-next-line no-param-reassign
-        reqConfig.headers.Authorization = accessToken
-      }
+    // 有access_token
+    const accessToken = getToken('access_token')
+    if (accessToken) {
+      // eslint-disable-next-line no-param-reassign
+      reqConfig.headers.Authorization = accessToken
     }
     return reqConfig
   },

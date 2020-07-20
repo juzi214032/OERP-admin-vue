@@ -3,9 +3,8 @@
  * @param {string} accessToken
  * @param {string} refreshToken
  */
-export function saveTokens(accessToken, refreshToken) {
-  localStorage.setItem('access_token', `Bearer ${accessToken}`)
-  localStorage.setItem('refresh_token', `Bearer ${refreshToken}`)
+export function saveTokens(accessToken) {
+  localStorage.setItem('access_token', `${accessToken}`)
 }
 
 /**

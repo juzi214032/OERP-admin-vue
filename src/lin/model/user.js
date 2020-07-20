@@ -22,7 +22,7 @@ export default class User {
    * @param {string} password 密码
    */
   static async getToken(username, password) {
-    const result = await post('api/v1/auth/login', {
+    const result = await post('/auth/login', {
       username,
       password,
     })
