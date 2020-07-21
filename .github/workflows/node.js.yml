@@ -19,7 +19,6 @@ jobs:
       run: npm i
     - name: 编译文件
       run: |
-        npm run lint
         npm run build
   deploy:
     name: 部署
@@ -35,7 +34,6 @@ jobs:
         run: npm i
       - name: 编译文件
         run: |
-          npm run lint
           npm run build
       - name: 上传文件
         uses: easingthemes/ssh-deploy@v2.1.4
