@@ -5,8 +5,8 @@ const userRouter = {
   type: 'folder', // 类型: folder, tab, view
   icon: 'iconfont icon-tushuguanli',
   filePath: 'view/user/', // 文件路径
-  order: null,
   inNav: true,
+  order: 1,
   children: [
     {
       title: '用户列表',

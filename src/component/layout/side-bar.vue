@@ -261,7 +261,7 @@ export default {
     z-index: 99;
 
     img {
-      width: 120px;
+      width: 150px;
       transition: all 0.3s linear;
     }
   }

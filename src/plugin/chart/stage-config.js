@@ -5,7 +5,7 @@ const ChartsRouter = {
   type: 'view',
   icon: 'iconfont icon-weibiaoti--',
   filePath: 'plugin/chart/view/chart.vue',
-  order: 0,
+  order: 3,
   inNav: true,
 }
 
