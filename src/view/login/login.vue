@@ -44,7 +44,7 @@ export default {
         const data = await User.getToken(username, password)
         this.setUserAndState(data.userInfo)
         this.loading = false
-        this.$router.push('/about')
+        this.$router.push('/user/list')
         this.$message.success('登录成功')
       } catch (e) {
         this.loading = false
