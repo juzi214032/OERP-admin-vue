@@ -5,7 +5,7 @@
       <div class="header">
         <div class="header-left"><p class="title">用户管理</p></div>
         <div class="header-right">
-          <lin-search @query="onQueryChange" placeholder="输入姓名搜索" />
+          <lin-search @query="onQueryChange" placeholder="输入姓名搜索"/>
         </div>
       </div>
       <!-- 表格 -->
@@ -72,7 +72,7 @@ import User from '@/model/user'
 
 export default {
   components: {
-    LinSearch
+    LinSearch,
   },
   data() {
     return {
@@ -125,6 +125,8 @@ export default {
       }],
       tableData: [],
       pageOn: 1,
+      // 搜索关键词
+      keyword: '',
     }
   },
   async created() {
@@ -147,7 +149,7 @@ export default {
     async changePage(pageOn) {
       this.loading = true
       this.pageOn = pageOn
-      await this.getUser(pageOn)
+      await this.getUser(pageOn, this.keyword)
       this.loading = false
     },
     handleDelete(index, row) {
@@ -168,9 +170,10 @@ export default {
     // 搜索框输入值
     async onQueryChange(keyword) {
       this.loading = true
+      this.keyword = keyword
       await this.getUser(1, keyword)
       this.loading = false
-    }
+    },
   },
 }
 </script>
