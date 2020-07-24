@@ -12,23 +12,23 @@ export default {
     return {
       data: [
         {
-          type: '服装',
+          type: '初中',
           value: 2700,
         },
         {
-          type: '游戏',
+          type: '高中',
           value: 2500,
         },
         {
-          type: '数码',
+          type: '本科',
           value: 1898,
         },
         {
-          type: '食品',
+          type: '硕士',
           value: 2376,
         },
         {
-          type: '书籍',
+          type: '博士',
           value: 1760,
         },
         {
@@ -41,7 +41,7 @@ export default {
   mounted() {
     new Rose('rose', {
       title: {
-        text: '品类分析',
+        text: '学历占比分析',
         visible: true,
       },
       data: this.data,
