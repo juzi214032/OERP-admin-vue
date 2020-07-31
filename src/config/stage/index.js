@@ -1,13 +1,15 @@
 import adminConfig from './admin'
 import userConfig from './user' // 引入用户管理路由文件
-import appliyConfig from './apply'
+import applyConfig from './apply'
+import examConfig from './exam'
 import pluginsConfig from './plugin'
 import Utils from '@/lin/util/util'
 
 // eslint-disable-next-line import/no-mutable-exports
 let homeRouter = [
   userConfig,
-  appliyConfig,
+  applyConfig,
+  examConfig,
   {
     title: '个人中心',
     type: 'view',
@@ -26,7 +28,6 @@ let homeRouter = [
     inNav: false,
     icon: 'iconfont icon-rizhiguanli',
   },
-  adminConfig,
 ]
 
 const plugins = [...pluginsConfig]
@@ -51,9 +52,9 @@ function filterPlugin(data) {
   }
 }
 
-filterPlugin(homeRouter)
+// filterPlugin(homeRouter)
 
-homeRouter = homeRouter.concat(plugins)
+// homeRouter = homeRouter.concat(plugins)
 
 // 处理顺序
 homeRouter = Utils.sortByOrder(homeRouter)

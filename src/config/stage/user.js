@@ -6,7 +6,7 @@ const userRouter = {
   icon: 'iconfont el-icon-user',
   filePath: 'view/user/', // 文件路径
   inNav: true,
-  order: 2,
+  order: 3,
   children: [
     {
       title: '用户列表',
