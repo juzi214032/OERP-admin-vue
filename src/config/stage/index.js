@@ -52,9 +52,9 @@ function filterPlugin(data) {
   }
 }
 
-// filterPlugin(homeRouter)
+filterPlugin(homeRouter)
 
-// homeRouter = homeRouter.concat(plugins)
+homeRouter = homeRouter.concat(plugins)
 
 // 处理顺序
 homeRouter = Utils.sortByOrder(homeRouter)
