@@ -1,11 +1,13 @@
 import adminConfig from './admin'
 import userConfig from './user' // 引入用户管理路由文件
+import appliyConfig from './apply'
 import pluginsConfig from './plugin'
 import Utils from '@/lin/util/util'
 
 // eslint-disable-next-line import/no-mutable-exports
 let homeRouter = [
   userConfig,
+  appliyConfig,
   {
     title: '个人中心',
     type: 'view',
